@@ -1,11 +1,7 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+body {
   font-family: sans-serif;
   color: #444;
+  border-top: 10px solid #1098ad;
 }
 
 h1,
@@ -71,12 +67,36 @@ li {
   list-style: none;
 }
 
-.main-eader {
+.main-header {
   background-color: #f7f7f7;
 }
 
 aside {
-  backgraund-color: #f7f7f7;
+  background-color: #e7f1f3;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
+}
+
+article p:last-child {
+  font-style: italic;
+}
+
+/* styling links LVHA */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color:#777; */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+}
+
+a:active {
+  font-style: italic;
 }
