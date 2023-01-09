@@ -51,6 +51,7 @@ h3 {
   text-transform: uppercase;
   font-weight: bold;
   color: lightslategray;
+  float: right;
   line-height: 24px;
 }
 
@@ -91,14 +92,16 @@ li {
 }
 
 .boxes {
-  display: flex;
-  gap: 10px;
+  display: block;
+  margin-bottom: 30px;
 }
 
 .box {
   width: 20px;
   height: 20px;
   background-color: black;
+  margin-right: 10px;
+  display: inline-block;
 }
 
 .blue {
@@ -123,32 +126,24 @@ li {
 
 .product-details {
   margin-top: 20px;
-  flex: 1;
+  float: left;
+  width: 240px;
 }
 
 img {
-  flex: 1;
+  margin-right: 40px;
+  float: left;
 }
 
 .info {
-  flex: 1;
+  float: left;
   margin-top: 20px;
+  margin-right: 40px;
+  width: 240px;
 }
 
 .price {
+  float: left;
   font-size: 24px;
   line-height: 24px;
-}
-
-.contents {
-  display: flex;
-  gap: 40px;
-
-}
-
-.product-price{
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
