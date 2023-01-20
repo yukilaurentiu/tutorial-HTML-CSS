@@ -1,58 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App Layout</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing:border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: sans-serif;
-      color: #343a40;
-      font-size: 24px;
-      height: 100vh;
-      text-align: center;
-      font-weight: bold;
-      display: grid;
-      grid-template-columns: 80px 400px 1fr 250px;
-      grid-template-rows: 80px 1fr;
-    }
-    nav, menu, section, aside, main{
-      padding-top: 24px;
-    }
+      body {
+        font-family: sans-serif;
+        color: #343a40;
+        font-size: 24px;
+        height: 100vh;
+        text-align: center;
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+      }
 
-    nav {
-      background-color: #140444;
-      color: white;
-      grid-row: 1/ -1;
-    }
+      nav,
+      section,
+      aside,
+      main {
+        padding-top: 24px;
+      }
 
-    menu {
-      background-color: #7048e8;
-      color: white;
-      grid-column: 2/-1;
-    }
+      nav {
+        background-color: #140444;
+        color: white;
+        grid-row: 1/ -1;
+      }
 
-    aside {
-      background-color: #a795dd;
-    }
+      menu {
+        background-color: #7048e8;
+        color: white;
+        grid-column: 2/-1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
 
-    section {
-      background-color:#b9a9e9 ;
-    }
-  </style>
-</head>
-<body>
-  <nav>Nav</nav>
-  <menu>Menu</menu>
-  <section>Inbox</section>
-  <main>Email view</main>
-  <aside>Additional info</aside>
-</body>
+      button {
+        background-color: #42298d;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 8px 12px;
+        display: inline-block;
+      }
+
+      button:last-child {
+        background-color: #d6336c;
+        margin-left: auto;
+      }
+
+      aside {
+        background-color: #dbd7e4;
+      }
+
+      section {
+        background-color: #dbd7e4;
+        padding: 40px;
+
+        overflow: scroll;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .email {
+        background-color: #adb5bd;
+        height: 96px;
+        flex-shrink: 0;
+
+        /* text treats as a flex item */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>Nav</nav>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+    </section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
+  </body>
 </html>
