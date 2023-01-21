@@ -13,7 +13,7 @@ Default: 1
 --- 02 COLORS
 - Primary: #e67e22
 - Tints: #fdf2e9
-- Shades:
+- Shades: #cf711f
 - Accents:
 - Greys: #555, #333, 
 
@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -76,17 +76,6 @@ body {
   margin-bottom: 4.8rem;
 }
 
-.section-hero {
-
-}
-
-.hero-text-box{
-
-}
-
-.hero-img-box{
-
-}
 
 .hero-img {
   width: 100%;
@@ -97,6 +86,7 @@ body {
   text-decoration: none;
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
+  font-weight: 600;
 
   /* Put transition on original state */
   transition: background-color 0.3s;
@@ -127,4 +117,39 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  display: flex;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+/* indevidually gives margin to img */
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.deliverred-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.deliverred-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
