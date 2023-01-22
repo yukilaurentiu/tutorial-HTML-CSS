@@ -55,6 +55,29 @@ body {
 /******************************************************/
 /* GENERAL REUSABLE COMPONENTS */
 /******************************************************/
+.container {
+  /* 114px */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols{
+  grid-template-columns: repeat(4, 1fr);
+}
 
 .heading-primary{
   font-size: 5.2rem;
@@ -94,7 +117,7 @@ body {
   background-color: #fdf2e9;
 
   /* border: 3px solid white; */
-
+  
   /* TRIK to add border inside */
   box-shadow: inset 0 0 0 3px white;
 }
@@ -222,5 +245,14 @@ body {
 .deliverred-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+/******************************************************/
+/* HOW IT WORKS SECTION */
+/******************************************************/
+
+.section-how {
+  padding: 9.6rem 0;
+  background-color: aquamarine;
 }
 
