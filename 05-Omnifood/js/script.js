@@ -1,11 +1,45 @@
-console.log('hello');
+console.log("hello");
 
-const h1 = document.querySelector('.heading-primary');
+const h1 = document.querySelector(".heading-primary");
 console.log(h1);
 
-const yearEl = document.querySelector('.year');
+const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
+
+// mobile navigator
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
+// smooth scrolling animation
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    //scroll back top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    //scroll smooth
+    if (href !== "#" && href.startsWith('#')){
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({behavior: "smooth"})
+    } 
+    
+    //Close mobile navigation 
+    if(link.classList.contains('main-nav-link')){
+      headerEl.classList.toggle("nav-open");
+    }
+  });
+});
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
